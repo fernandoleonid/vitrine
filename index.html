@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vitrine de Projetos | SENAI Jandira</title>
+    <meta
+      name="description"
+      content="Projetos de conclusão de curso de Desenvolvimento de Sistemas do SENAI Jandira."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="container nav-wrap">
+          <a href="#/" class="brand" aria-label="Vitrine SENAI Jandira, início">
+            <span class="brand-mark"><span>V</span></span>
+            <span class="brand-copy">
+              <strong>Vitrine de Projetos</strong>
+              <small>SENAI Jandira · Desenvolvimento de Sistemas</small>
+            </span>
+          </a>
+
+          <button
+            id="menu-toggle"
+            class="mobile-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="menu"
+          ></button>
+
+          <nav id="menu" class="main-nav" aria-label="Navegação principal">
+            <a href="#/" data-rota="home">Início</a>
+            <a href="#/acervo" data-rota="acervo">Acervo</a>
+            <a href="#/sobre" data-rota="sobre">Sobre</a>
+            <a href="#/banca" class="button button--primary nav-cta">
+              Participar da banca <span data-icone="arrow" data-tamanho="17"></span>
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- O conteúdo de cada página é montado pelo main.js -->
+      <div id="app"></div>
+
+      <footer class="footer">
+        <div class="container footer-main">
+          <div>
+            <a href="#/" class="brand" aria-label="Vitrine SENAI Jandira, início">
+              <span class="brand-mark"><span>V</span></span>
+              <span class="brand-copy">
+                <strong>Vitrine de Projetos</strong>
+                <small>SENAI Jandira · Desenvolvimento de Sistemas</small>
+              </span>
+            </a>
+            <p>
+              Projetos, trajetórias e soluções desenvolvidas por estudantes de
+              Desenvolvimento de Sistemas.
+            </p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <strong>Navegue</strong>
+              <a href="#/">Início</a>
+              <a href="#/acervo">Acervo</a>
+              <a href="#/sobre">Sobre</a>
+            </div>
+            <div>
+              <strong>Conecte-se</strong>
+              <a href="#/banca">Participar da banca</a>
+              
+            </div>
+          </div>
+        </div>
+        <div class="container footer-bottom">
+          <span>© 2026 Vitrine de Projetos · SENAI Jandira</span>
+          <span>Edição 2026 · 2º semestre</span>
+        </div>
+      </footer>
+    </div>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
