@@ -101,9 +101,14 @@ function visualProjeto(projeto, grande = false) {
 
   // Se o projeto tiver imagem no data.js, ela substitui o desenho decorativo
   if (projeto.imagem) {
+    const imagem =
+      window.location.hostname === "fernandoleonid.github.io"
+        ? `/vitrine/${projeto.imagem.replace(/^\.\//, "")}`
+        : projeto.imagem;
+
     return `
       <div class="project-visual ${grande ? "project-visual--large" : ""}">
-        <img class="visual-imagem" src="${projeto.imagem}"
+        <img class="visual-imagem" src="${imagem}"
              alt="Imagem do projeto ${projeto.nome}" loading="lazy" />
       </div>`;
   }
