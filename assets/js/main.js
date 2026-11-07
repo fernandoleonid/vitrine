@@ -188,8 +188,6 @@ function previaAcervo() {
 }
 
 function paginaInicio() {
-  const totalTurmas = new Set(projetos.map((item) => item.turma)).size;
-  const destaque = projetos[0];
   const pontosEmpresa = [
     ["Conheça novos talentos", "em início de carreira."],
     ["Compartilhe sua visão", "sobre produto e tecnologia."],
@@ -206,57 +204,6 @@ function paginaInicio() {
 
   return `
     <main>
-      <section class="hero">
-        <div class="hero-lines"></div>
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <div class="hero-kicker">
-              <span class="status-dot"></span> Edição ${textoEdicao()}
-            </div>
-            <h1>
-              Talentos em desenvolvimento.<br />
-              <em>Soluções para o mundo real.</em>
-            </h1>
-            <p>
-              Conheça os projetos de conclusão de curso que conectam
-              tecnologia, criatividade e desafios da sociedade.
-            </p>
-            <div class="hero-actions">
-              ${botaoLink("#projetos", `Explorar projetos ${icone("arrow", 19)}`)}
-              ${botaoLink("#/banca", "Quero participar da banca", "light")}
-            </div>
-            <div class="hero-proof">
-              <div><strong>${projetos.length}</strong><span>projetos nesta edição</span></div>
-              <div>
-                <strong>${totalTurmas}</strong>
-                <span>${totalTurmas === 1 ? "turma participante" : "turmas participantes"}</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero-showcase" aria-hidden="true">
-            <div class="showcase-card showcase-card--back">
-              <span>Desenvolvimento</span>
-              <strong>Ideias que evoluem<br />para soluções.</strong>
-            </div>
-            <div class="showcase-card showcase-card--front">
-              <div class="showcase-top">
-                <span>PROJETO EM DESTAQUE</span>
-                <span>01 / ${String(projetos.length).padStart(2, "0")}</span>
-              </div>
-              <div class="showcase-symbol"><span></span><span></span><span></span></div>
-              <div>
-                <small>${destaque.categoria}</small>
-                <strong>${destaque.nome}</strong>
-                <p>Tecnologia aplicada a desafios reais.</p>
-              </div>
-            </div>
-            <div class="floating-pill floating-pill--one">${icone("code", 17)} Desenvolvimento</div>
-            <div class="floating-pill floating-pill--two">${icone("users", 17)} Trabalho em equipe</div>
-          </div>
-        </div>
-      </section>
-
       <section class="section projects-section" id="projetos">
         <div class="container">
           <div class="section-head">
