@@ -57,7 +57,7 @@ const projetos = [
   {
     slug: "ecowayer",
     nome: "EcoWayer",
-    imagem: "/assets/images/2026-2/ecowayer.svg",
+    imagem: "./assets/images/2026-2/ecowayer.svg",
     equipe: "Meraki",
     categoria: "Sustentabilidade e Economia Circular",
     turma: "Manhã",
@@ -128,7 +128,7 @@ const projetos = [
   {
     slug: "vibeeco",
     nome: "VibeEco",
-    imagem: "/assets/images/2026-2/vibeeco.svg",
+    imagem: "./assets/images/2026-2/vibeeco.svg",
     equipe: "TechProton",
     categoria: "Sustentabilidade e Educação",
     turma: "Manhã",
@@ -193,7 +193,7 @@ const projetos = [
   {
     slug: "nexus",
     nome: "NEXUS",
-    imagem: "/assets/images/2026-2/nexus.jpg",
+    imagem: "./assets/images/2026-2/nexus.jpg",
     equipe: "", 
     categoria: "A definir", 
     turma: "Manhã",
@@ -232,7 +232,7 @@ const projetos = [
     {
     slug: "dialoga",
     nome: "DiaLoga",
-    imagem: "/assets/images/2026-2/dialoga.svg",
+    imagem: "./assets/images/2026-2/dialoga.svg",
     equipe: "Tenebrix",
     categoria: "Saúde Mental",
     turma: "Manhã",
