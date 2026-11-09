@@ -38,6 +38,7 @@ const projetos = [
   {
     slug: "fimap",
     nome: "Fimap", 
+    imagem: "./assets/images/2026-2/fimap.svg",
     equipe: "", 
     categoria: "A definir", 
     turma: "Manhã",
@@ -51,7 +52,13 @@ const projetos = [
     solucao: "",
     funcionalidades: [],
     ods: [],
-    integrantes: [],
+    integrantes: [
+      { nome: "Arthur", funcao: "Integrante", contribuicao: "", link: "https://github.com/Thuzs" },
+      { nome: "Murilo", funcao: "Integrante", contribuicao: "", link: "https://github.com/Murilo-Antunes" },
+      { nome: "Hugo", funcao: "Integrante", contribuicao: "", link: "https://github.com/Guhhxz" },
+      { nome: "Pedro", funcao: "Integrante", contribuicao: "", link: "https://github.com/pedrorodriguesdev" },
+      { nome: "Anderson", funcao: "Integrante", contribuicao: "", link: "https://github.com/Nephyro" },
+    ],
     links: [{ rotulo: "Repositório no GitHub", url: "https://github.com/Thuzs/Fimap" }],
   },
   {
@@ -87,31 +94,31 @@ const projetos = [
         nome: "Jean Costa",
         funcao: "Back-end, Mobile e Gestão de Projetos",
         contribuicao: "",
-        link: "", // README: https://github.com/Jean090504
+        link: "https://github.com/Jean090504",
       },
       {
         nome: "Maxwillian Santana",
         funcao: "Back-end e Mobile",
         contribuicao: "",
-        link: "", // README: https://www.linkedin.com/in/maxw06/
+        link: "https://www.linkedin.com/in/maxw06/",
       },
       {
         nome: "Fernanda Cardoso",
         funcao: "Banco de Dados",
         contribuicao: "",
-        link: "", // README: https://www.linkedin.com/in/fernanda-mota-38435b37a/
+        link: "https://www.linkedin.com/in/fernanda-mota-38435b37a/",
       },
       {
         nome: "Aryely Hevylyn",
         funcao: "Front-end e Requisitos",
         contribuicao: "",
-        link: "", // README: https://www.linkedin.com/in/aryely-hevylyn-ab9a3039a/
+        link: "https://www.linkedin.com/in/aryely-hevylyn-ab9a3039a/",
       },
       {
         nome: "Gustavo Vitor",
         funcao: "Banco de Dados",
         contribuicao: "",
-        link: "", // README: https://www.linkedin.com/in/gustavo-souza08/
+        link: "https://www.linkedin.com/in/gustavo-souza08/",
       },
     ],
     links: [
@@ -157,25 +164,25 @@ const projetos = [
         nome: "Pedro Sousa",
         funcao: "Gerente de Projeto e Mobile",
         contribuicao: "",
-        link: "", // README: https://github.com/pedsousa06-ai
+        link: "https://github.com/pedsousa06-ai",
       },
       {
         nome: "Gabriel Sousa",
         funcao: "Front-end",
         contribuicao: "",
-        link: "", // README: https://github.com/GabrielsrMelo
+        link: "https://github.com/GabrielsrMelo",
       },
       {
         nome: "Lucas Kolle",
         funcao: "Back-end",
         contribuicao: "",
-        link: "", // README: https://github.com/Lucas-Kolle
+        link: "https://github.com/Lucas-Kolle",
       },
       {
         nome: "Ryller Feitosa",
         funcao: "Banco de Dados",
         contribuicao: "",
-        link: "", // README: https://github.com/ryllerfeitosadba
+        link: "https://github.com/ryllerfeitosadba",
       },
     ],
     links: [
@@ -213,6 +220,7 @@ const projetos = [
   {
     slug: "wattvision",
     nome: "WattVision", // EDITAR: nome oficial do projeto
+    imagem: "./assets/images/2026-2/wattvision.svg",
     equipe: "", // EDITAR
     categoria: "A definir", // EDITAR
     turma: "Manhã",
@@ -254,31 +262,31 @@ const projetos = [
         nome: "Julio Augusto",
         funcao: "", // EDITAR
         contribuicao: "",
-        link: "", // README: https://github.com/julioau15
+        link: "https://github.com/julioau15",
       },
       {
         nome: "Mayara Martins",
         funcao: "", // EDITAR
         contribuicao: "",
-        link: "", // README: https://github.com/maymandrade
+        link: "https://github.com/maymandrade",
       },
       {
         nome: "Allan de Souza",
         funcao: "", // EDITAR
         contribuicao: "",
-        link: "", // README: https://github.com/Dilansty
+        link: "https://github.com/Dilansty",
       },
       {
         nome: "Brayan Alves",
         funcao: "", // EDITAR
         contribuicao: "",
-        link: "", // README: https://github.com/Brayan717171
+        link: "https://github.com/Brayan717171",
       },
       {
         nome: "Enzo Crepaldi",
         funcao: "", // EDITAR
         contribuicao: "",
-        link: "", // README: https://github.com/Enzu666
+        link: "https://github.com/Enzu666",
       },
     ],
     links: [
@@ -294,6 +302,7 @@ const projetos = [
   {
     slug: "healthsystems",
     nome: "HealthSystems",
+    imagem: "./assets/images/2026-2/healthsystems.svg",
     equipe: "",
     categoria: "A definir",
     turma: "Tarde",
@@ -313,6 +322,8 @@ const projetos = [
   {
     slug: "tcc-ds",
     nome: "Materna",
+    imagem: "./assets/images/2026-2/materna-logo.svg",
+    imagemAjuste: "contain",
     equipe: "",
     categoria: "Doação de leite materno",
     turma: "Tarde",
@@ -354,6 +365,8 @@ const projetos = [
   {
     slug: "4tech-andpanelas",
     nome: "Entre Panelas",
+    imagem: "./assets/images/2026-2/entre-panelas-logo.png",
+    imagemAjuste: "contain",
     equipe: "4Tech",
     categoria: "Culinária e Inteligência Artificial",
     turma: "Tarde",
@@ -384,6 +397,8 @@ const projetos = [
   {
     slug: "ecoleta-tcc",
     nome: "Ecoleta",
+    imagem: "./assets/images/2026-2/ecoleta-logo.png",
+    imagemAjuste: "contain",
     equipe: "Equipe Ecoleta",
     categoria: "Sustentabilidade e Gestão de Resíduos",
     turma: "Tarde",
@@ -423,6 +438,7 @@ const projetos = [
   {
     slug: "bloom-geral",
     nome: "Bloom",
+    imagem: "./assets/images/2026-2/bloom.svg",
     equipe: "",
     categoria: "A definir",
     turma: "Tarde",
@@ -436,8 +452,54 @@ const projetos = [
     solucao: "",
     funcionalidades: [],
     ods: [],
-    integrantes: [{ nome: "Lucas", funcao: "Líder/Responsável", contribuicao: "", link: "" }],
+    integrantes: [{ nome: "Lucas Alexandre", funcao: "Líder/Responsável", contribuicao: "", link: "https://github.com/LucasAlexandreDev" }],
     links: [{ rotulo: "Repositório no GitHub", url: "https://github.com/LucasAlexandreDev/bloom-geral" }],
+  },
+  {
+    slug: "oroscorp",
+    nome: "OROSCORP",
+    imagem: "./assets/images/2026-2/oroscorp-fundo.png",
+    equipe: "Equipe OROSCORP",
+    categoria: "Segurança do Trabalho e Inteligência Artificial",
+    turma: "Tarde",
+    descricaoCurta:
+      "Sistema que usa inteligência artificial e câmeras para identificar o uso correto de EPIs e alertar gestores sobre ocorrências.",
+    status: "Em desenvolvimento",
+    inicio: "",
+    areas: ["Inteligência artificial", "Visão computacional", "Web", "Mobile"],
+    tecnologias: ["Next.js", "Kotlin", "Node.js", "Inteligência artificial"],
+    destaque: "blue",
+    problema:
+      "A fiscalização do uso de Equipamentos de Proteção Individual pode ser difícil de acompanhar continuamente nos diferentes setores.",
+    solucao:
+      "Plataforma que analisa imagens de câmeras para identificar em tempo real o uso de EPIs e gera ocorrências e alertas quando detecta inconformidades.",
+    funcionalidades: [
+      "Monitoramento do uso de EPIs por câmeras",
+      "Identificação de inconformidades com inteligência artificial",
+      "Geração automática de ocorrências e alertas para gestores",
+    ],
+    ods: [],
+    integrantes: [
+      { nome: "Matheus Lucas", funcao: "Desenvolvedor Full Stack", contribuicao: "", link: "https://github.com/suehtam6" },
+      { nome: "Nathan Luna", funcao: "Desenvolvedor Full Stack", contribuicao: "", link: "https://github.com/NathanLuna15" },
+      { nome: "João Pedro", funcao: "Desenvolvedor Front-End", contribuicao: "", link: "https://github.com/eojotta" },
+      { nome: "Kaique Carvalho", funcao: "Desenvolvedor Mobile", contribuicao: "", link: "https://github.com/Erymanthusn" },
+      { nome: "Estephano Borovicz", funcao: "Desenvolvedor Back-End", contribuicao: "", link: "https://github.com/EstephanoBorovicz" },
+    ],
+    links: [
+      { rotulo: "Repositório principal", url: "https://github.com/suehtam6/OROSCORP" },
+      { rotulo: "Front-end de administração", url: "https://github.com/suehtam6/FRONT-END--OROSCORP" },
+      { rotulo: "Front-end do gestor", url: "https://github.com/suehtam6/OROSCORP-FrontEnd-GESTOR" },
+      { rotulo: "Aplicativo mobile de administração", url: "https://github.com/suehtam6/OROSCORP---MOBILE" },
+      { rotulo: "Aplicativo mobile do responsável", url: "https://github.com/suehtam6/OROSCORP---MOBILE---RESPONSAVEL" },
+      { rotulo: "Back-end e API", url: "https://github.com/suehtam6/BACK-END--OROSCORP" },
+      { rotulo: "Banco de dados", url: "https://drive.google.com/drive/folders/1G2IK0pSDc8vQOc9HWo3EVIykS-iKaFxx?usp=sharing" },
+      { rotulo: "Requisitos", url: "https://drive.google.com/drive/folders/1U9tU7B4aOBumA4_IgHb4xbiAu335aiTl?hl=pt-br" },
+      { rotulo: "Testes de software", url: "https://drive.google.com/drive/folders/1VQLjzlBqm_VVNy0v2Jv4dArvqyIKiYN-" },
+      { rotulo: "IA treinada", url: "https://drive.google.com/drive/folders/1Ds_iASo10d7od2Rzd1R-oc0hmX9xJDu0" },
+      { rotulo: "Protótipo no Figma", url: "https://www.figma.com/design/EGnmcjKFmQm2fOeWDJ5dW4/TCC?node-id=0-1&p=f&t=g5X4KN9EptEwbwLU-0" },
+      { rotulo: "EAP/WBS no Miro", url: "https://miro.com/app/board/uXjVG4PFCBs=/?share_link_id=726563202621" },
+    ],
   },
 ];
 

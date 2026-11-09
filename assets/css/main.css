@@ -575,6 +575,11 @@
   background-color: #161616;
 }
 
+.visual-imagem--contain {
+  object-fit: contain;
+  padding: 24px;
+}
+
 .project-visual--large {
   height: 300px;
   border-radius: 16px;
@@ -726,13 +731,27 @@
   margin-top: 17px;
 }
 
-.tags span {
+.tags span,
+.tags a {
   padding: 5px 8px;
   background: var(--color-mist);
   color: #565652;
   border-radius: 5px;
   font-size: 9px;
   font-weight: 700;
+}
+
+.tags a {
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.tags a:hover {
+  background-color: var(--color-accent);
+}
+
+.tags a:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
 }
 
 .card-link {
@@ -745,6 +764,11 @@
   font-size: 11px;
   font-weight: 800;
   color: var(--color-ink);
+  transition: color 0.2s ease;
+}
+
+.card-link:hover {
+  color: #686863;
 }
 
 .card-link svg {
@@ -1308,7 +1332,22 @@
 
 .tech-detail strong {
   margin: 21px 0 4px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-size: 14px;
+}
+
+.tech-detail strong i {
+  width: 34px;
+  color: var(--color-slate);
+  font-size: 30px;
+  text-align: center;
+  transition: color 180ms ease;
+}
+
+.tech-detail div:hover strong i {
+  color: var(--color-accent);
 }
 
 .tech-detail small {
@@ -1929,7 +1968,7 @@
   }
   /* Seções */
   .section {
-    padding-block: 100px;
+    padding-block: 32px;
   }
 
   .section-head {

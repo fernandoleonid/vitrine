@@ -16,32 +16,55 @@ const estado = {
   enviado: false, // confirmação do formulário da banca
 };
 
-/* ---------- Ícones (SVG) ---------- */
+/* ---------- Ícones (Font Awesome) ---------- */
 const ICONES = {
-  arrow: '<path d="M5 12h14" /><path d="m13 6 6 6-6 6" />',
-  chevron: '<path d="m9 18 6-6-6-6" />',
-  menu: '<path d="M4 7h16" /><path d="M4 12h16" /><path d="M4 17h16" />',
-  close: '<path d="m6 6 12 12" /><path d="m18 6-12 12" />',
-  code: '<path d="m8 9-4 3 4 3" /><path d="m16 9 4 3-4 3" /><path d="m14 5-4 14" />',
-  users:
-    '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />',
-  briefcase:
-    '<rect x="3" y="7" width="18" height="13" rx="2" /><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /><path d="M12 12v.01" /><path d="M3 12a18 18 0 0 0 18 0" />',
-  layers:
-    '<path d="m12 2 9 5-9 5-9-5 9-5Z" /><path d="m3 12 9 5 9-5" /><path d="m3 17 9 5 9-5" />',
-  check: '<path d="m5 12 4 4L19 6" />',
-  external:
-    '<path d="M15 3h6v6" /><path d="m10 14 11-11" /><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />',
-  mail: '<rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" />',
-  calendar:
-    '<rect x="3" y="5" width="18" height="16" rx="2" /><path d="M16 3v4M8 3v4M3 11h18" />',
-  clock: '<circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" />',
-  linkedin:
-    '<rect x="3" y="3" width="18" height="18" rx="2" /><path d="M8 11v5M8 8v.01M12 16v-5M12 13.5a2.5 2.5 0 0 1 5 0V16" />',
+  arrow: "fas fa-arrow-right",
+  chevron: "fas fa-chevron-down",
+  menu: "fas fa-bars",
+  close: "fas fa-times",
+  code: "fas fa-code",
+  users: "fas fa-users",
+  briefcase: "fas fa-briefcase",
+  layers: "fas fa-layer-group",
+  check: "fas fa-check",
+  external: "fas fa-external-link-alt",
+  mail: "fas fa-envelope",
+  calendar: "fas fa-calendar-alt",
+  clock: "fas fa-clock",
+  linkedin: "fab fa-linkedin",
+};
+
+const ICONES_TECNOLOGIAS = {
+  html: "fab fa-html5",
+  html5: "fab fa-html5",
+  css: "fab fa-css3-alt",
+  css3: "fab fa-css3-alt",
+  javascript: "fab fa-js",
+  js: "fab fa-js",
+  react: "fab fa-react",
+  "node.js": "fab fa-node-js",
+  node: "fab fa-node-js",
+  mysql: "fas fa-database",
+  kotlin: "fas fa-code",
+  "android studio": "fab fa-android",
+  "api rest": "fas fa-server",
+  rest: "fas fa-server",
+  vite: "fas fa-bolt",
+  "next.js": "fas fa-layer-group",
+  "inteligência artificial": "fas fa-brain",
+  "inteligencia artificial": "fas fa-brain",
 };
 
 function icone(nome, tamanho = 20) {
-  return `<svg aria-hidden="true" width="${tamanho}" height="${tamanho}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ICONES[nome]}</svg>`;
+  const classe = ICONES[nome] || `fas ${nome}`;
+  const estilo = `style="display: inline-block; font-size: ${tamanho}px; width: ${tamanho}px; text-align: center;"`;
+  return `<i class="${classe}" aria-hidden="true" ${estilo}></i>`;
+}
+
+function iconeTecnologia(tecnologia) {
+  const chave = tecnologia.trim().toLocaleLowerCase("pt-BR");
+  const classe = ICONES_TECNOLOGIAS[chave] || "fas fa-code";
+  return `<i class="${classe}" aria-hidden="true"></i>`;
 }
 
 /* ---------- Componentes reutilizáveis ---------- */
@@ -80,6 +103,24 @@ function etiquetasProjeto(projeto) {
   return projeto.tecnologias.length ? projeto.tecnologias : projeto.areas;
 }
 
+function tagsIntegrantes(projeto) {
+  const integrantes = projeto.integrantes
+    .map((integrante) => ({
+      ...integrante,
+      nome: integrante.nome.trim().split(/\s+/).slice(0, 2).join(" "),
+    }))
+    .filter(({ nome }) => nome);
+
+  if (!integrantes.length) return "";
+  return `<div class="tags">${integrantes
+    .map(({ nome, link }) =>
+      link
+        ? `<a href="${link}" target="_blank" rel="noopener noreferrer" aria-label="Perfil de ${nome}">${nome}</a>`
+        : `<span>${nome}</span>`
+    )
+    .join("")}</div>`;
+}
+
 function estadoVazio(titulo, texto) {
   return `
     <div class="empty-state">
@@ -108,7 +149,7 @@ function visualProjeto(projeto, grande = false) {
 
     return `
       <div class="project-visual ${grande ? "project-visual--large" : ""}">
-        <img class="visual-imagem" src="${imagem}"
+        <img class="visual-imagem ${projeto.imagemAjuste === "contain" ? "visual-imagem--contain" : ""}" src="${imagem}"
              alt="Imagem do projeto ${projeto.nome}" loading="lazy" />
       </div>`;
   }
@@ -135,11 +176,11 @@ function cardProjeto(projeto) {
       <div class="project-card__body">
         <div class="card-meta">
           <span>${projeto.categoria}</span>
-          <span>Turma ${projeto.turma}</span>
+          <span>Turma&nbsp;${projeto.turma}</span>
         </div>
         <h3>${projeto.nome}</h3>
         <p>${projeto.descricaoCurta}</p>
-        ${tags(etiquetasProjeto(projeto))}
+        ${tagsIntegrantes(projeto)}
         <a href="#/projeto/${projeto.slug}" class="card-link">
           Conhecer projeto ${icone("arrow", 18)}
         </a>
@@ -277,7 +318,7 @@ function paginaProjeto(projeto) {
         (tec, indice) => `
         <div>
           <span>0${indice + 1}</span>
-          <strong>${tec}</strong>
+          <strong>${iconeTecnologia(tec)}${tec}</strong>
         </div>`
       )
       .join("");
