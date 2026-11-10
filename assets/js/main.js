@@ -1,22 +1,14 @@
 "use strict";
 
-/* ==========================================================
-   main.js
-   Rotas por hash, renderização das páginas e eventos.
-   Depende de data.js (projetos e acervo).
-   ========================================================== */
-
-/* ---------- Estado e elementos ---------- */
 const app = document.getElementById("app");
 const menu = document.getElementById("menu");
 const botaoMenu = document.getElementById("menu-toggle");
 
 const estado = {
-  periodo: "Todos", // filtro da página de acervo
-  enviado: false, // confirmação do formulário da banca
+  periodo: "Todos",
+  enviado: false,
 };
 
-/* ---------- Ícones (Font Awesome) ---------- */
 const ICONES = {
   arrow: "fas fa-arrow-right",
   chevron: "fas fa-chevron-down",
@@ -67,7 +59,6 @@ function iconeTecnologia(tecnologia) {
   return `<i class="${classe}" aria-hidden="true"></i>`;
 }
 
-/* ---------- Componentes reutilizáveis ---------- */
 function botaoLink(destino, conteudo, variante = "primary", extra = "") {
   return `<a href="${destino}" class="button button--${variante} ${extra}">${conteudo}</a>`;
 }
@@ -80,7 +71,6 @@ function tituloSecao({ sobretitulo, titulo, texto, alinhamento = "left" }) {
       ${texto ? `<p>${texto}</p>` : ""}
     </div>`;
 }
-
 
 function heroPagina({ sobretitulo, titulo, texto }) {
   return `
@@ -98,7 +88,6 @@ function textoEdicao() {
   return `${edicaoAtual.ano} · ${edicaoAtual.semestre}`;
 }
 
-// Etiquetas: usa as tecnologias e, se ainda não houver, as áreas do projeto
 function etiquetasProjeto(projeto) {
   return projeto.tecnologias.length ? projeto.tecnologias : projeto.areas;
 }
@@ -139,8 +128,17 @@ function tags(lista, classe = "") {
 
 function visualProjeto(projeto, grande = false) {
   const numero = String(projetos.indexOf(projeto) + 1).padStart(2, "0");
+  const videoPitch = grande ? urlVideoPitch(projeto.videoPitch) : "";
 
-  // Se o projeto tiver imagem no data.js, ela substitui o desenho decorativo
+  if (videoPitch) {
+    return `
+      <div class="project-visual project-visual--large">
+        <iframe src="${videoPitch}" title="Vídeo pitch do projeto ${projeto.nome}"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+      </div>`;
+  }
+
   if (projeto.imagem) {
     const imagem =
       window.location.hostname === "fernandoleonid.github.io"
@@ -169,6 +167,32 @@ function visualProjeto(projeto, grande = false) {
     </div>`;
 }
 
+function urlVideoPitch(valor) {
+  if (typeof valor !== "string" || !valor.trim()) return "";
+
+  let url;
+  try {
+    url = new URL(valor);
+  } catch {
+    return "";
+  }
+
+  let id = "";
+  if (url.hostname === "youtu.be") {
+    id = url.pathname.split("/")[1] || "";
+  } else if (["youtube.com", "www.youtube.com", "m.youtube.com"].includes(url.hostname)) {
+    if (url.pathname === "/watch") {
+      id = url.searchParams.get("v") || "";
+    } else {
+      id = url.pathname.match(/^\/(?:embed|shorts|live)\/([\w-]+)\/?$/)?.[1] || "";
+    }
+  }
+
+  return /^[\w-]{11}$/.test(id)
+    ? `https://www.youtube-nocookie.com/embed/${id}`
+    : "";
+}
+
 function cardProjeto(projeto) {
   return `
     <article class="project-card">
@@ -188,7 +212,6 @@ function cardProjeto(projeto) {
     </article>`;
 }
 
-/* ---------- Página: início ---------- */
 function previaAcervo() {
   const cards = acervo
     .map(
@@ -285,13 +308,11 @@ function paginaInicio() {
     </main>`;
 }
 
-/* ---------- Página: projeto ---------- */
 function paginaProjeto(projeto) {
   const proximo = projetos[(projetos.indexOf(projeto) + 1) % projetos.length];
   const marcas = (lista) =>
     lista.map((item) => `<div>${icone("check", 18)}<span>${item}</span></div>`).join("");
 
-  // Cada bloco só aparece quando o campo correspondente estiver preenchido
   const blocos = [];
 
   if (projeto.problema) {
@@ -435,7 +456,6 @@ function paginaNaoEncontrada() {
   });
 }
 
-/* ---------- Página: acervo ---------- */
 function paginaAcervo() {
   const anos = [...new Set(acervo.map((item) => item.edicao.split(" · ")[0]))];
   const periodos = ["Todos", ...anos];
@@ -505,7 +525,6 @@ function paginaAcervo() {
     </main>`;
 }
 
-/* ---------- Página: sobre ---------- */
 function paginaSobre() {
   const principios = [
     ["01", "Protagonismo", "Cada estudante é apresentado como profissional em formação, com suas competências e contribuições."],
@@ -584,7 +603,6 @@ function paginaSobre() {
     </main>`;
 }
 
-/* ---------- Página: banca ---------- */
 function formularioBanca() {
   return `
     <form id="form-banca">
@@ -696,7 +714,6 @@ function paginaBanca() {
     </main>`;
 }
 
-/* ---------- Rotas ---------- */
 function obterRota() {
   const hash = window.location.hash.replace("#/", "");
   if (hash.startsWith("projeto/")) return { tipo: "projeto", slug: hash.split("/")[1] };
@@ -735,7 +752,6 @@ function renderizar() {
   marcarMenuAtivo(rota);
 }
 
-/* ---------- Menu mobile ---------- */
 function definirMenu(aberto) {
   menu.classList.toggle("is-open", aberto);
   botaoMenu.setAttribute("aria-expanded", String(aberto));
@@ -749,9 +765,8 @@ botaoMenu.addEventListener("click", () => {
 
 menu.addEventListener("click", () => definirMenu(false));
 
-/* ---------- Eventos globais ---------- */
 window.addEventListener("hashchange", () => {
-  // Âncora interna da home: deixa o navegador rolar até a seção
+
   if (window.location.hash === "#projetos" && app.querySelector("#projetos")) return;
 
   renderizar();
@@ -779,7 +794,6 @@ app.addEventListener("submit", (evento) => {
   renderizar();
 });
 
-/* ---------- Início ---------- */
 document.querySelectorAll("[data-icone]").forEach((marcador) => {
   marcador.outerHTML = icone(marcador.dataset.icone, Number(marcador.dataset.tamanho) || 20);
 });

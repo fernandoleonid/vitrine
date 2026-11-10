@@ -1,49 +1,18 @@
 "use strict";
 
-/* ==========================================================
-   data.js
-   Conteúdo da vitrine. Para editar a página, altere apenas
-   este arquivo.
-   ========================================================== */
-
-// Edição exibida na vitrine
 const edicaoAtual = { ano: 2026, semestre: "2º semestre", numero: "02" };
-
-/*
-  MODELO DE PROJETO (copie e preencha)
-  Campos vazios ("" ou []) não aparecem na página do projeto.
-
-  {
-    slug: "nome-sem-espacos",
-    nome: "",
-    equipe: "",                 // empresa ou equipe do projeto
-    categoria: "",
-    turma: "Manhã",             // "Manhã" ou "Tarde"
-    descricaoCurta: "",
-    status: "Em desenvolvimento",
-    inicio: "",                 // ex.: "10/08/2026"
-    areas: [],                  // ex.: ["Front-end", "Back-end", "Mobile"]
-    tecnologias: [],            // quando preenchido, substitui "areas" nas etiquetas
-    destaque: "cyan",           // cyan, blue, violet, green, orange ou pink
-    problema: "",
-    solucao: "",
-    funcionalidades: [],
-    ods: [],
-    integrantes: [{ nome: "", funcao: "", contribuicao: "", link: "" }],
-    links: [{ rotulo: "", url: "" }],
-  }
-*/
 
 const projetos = [
   {
     slug: "fimap",
-    nome: "Fimap", 
+    videoPitch: "",
+    nome: "FIMAP",
     imagem: "./assets/images/2026-2/fimap.svg",
-    equipe: "", 
-    categoria: "A definir", 
+    equipe: "",
+    categoria: "A definir",
     turma: "Manhã",
-    descricaoCurta: "A Fimap é uma aplicação destinada ao mercado financeiro que tem como público alvo pessoas com necessidades de manipular seu dinheiro de uma melhor maneira, assim como entender sobre questões financeiras de maneira orgânica.", 
-    status: "A definir", 
+    descricaoCurta: "A Fimap é uma aplicação destinada ao mercado financeiro que tem como público alvo pessoas com necessidades de manipular seu dinheiro de uma melhor maneira, assim como entender sobre questões financeiras de maneira orgânica.",
+    status: "A definir",
     inicio: "",
     areas: [],
     tecnologias: [],
@@ -59,10 +28,23 @@ const projetos = [
       { nome: "Pedro", funcao: "Integrante", contribuicao: "", link: "https://github.com/pedrorodriguesdev" },
       { nome: "Anderson", funcao: "Integrante", contribuicao: "", link: "https://github.com/Nephyro" },
     ],
-    links: [{ rotulo: "Repositório no GitHub", url: "https://github.com/Thuzs/Fimap" }],
+    links: [
+      { rotulo: "Repositório principal", url: "https://github.com/Thuzs/Fimap" },
+      { rotulo: "Repositório do back-end", url: "https://github.com/Guhhxz/Back-end-FIMAP" },
+      { rotulo: "Requisitos de negócio", url: "https://docs.google.com/document/d/1Rcx7Q1sOhEdZ10WHrPW59SdkeK7YQWoIa-DzfcK6B-o/edit?usp=sharing" },
+      { rotulo: "Requisitos funcionais", url: "https://docs.google.com/document/d/14yVumIdsQ9BdmwzZstf8ka7flUwIH5oX/edit?usp=sharing&ouid=106577692142462691391&rtpof=true&sd=true" },
+      { rotulo: "Requisitos não funcionais", url: "https://docs.google.com/document/d/1N2HAioVkY6YqSe5BItpo7UpseXKgebejmkF3y4f2tL8/edit?usp=sharing" },
+      { rotulo: "TAP no Miro", url: "https://miro.com/app/board/uXjVHpa3Jh4=/?share_link_id=523195214914" },
+      { rotulo: "Modelo conceitual do banco de dados", url: "https://drive.google.com/drive/folders/1YK91x_gYVm27MBjn0p-XSy6qQ9UA_YxE?usp=sharing" },
+      { rotulo: "Modelo lógico do banco de dados", url: "https://drive.google.com/drive/folders/1WQaGQ_0MAAIlf1oeLUtf_6N3eM9PGQWn?usp=sharing" },
+      { rotulo: "Swagger da API", url: "https://app.swaggerhub.com/apis/asd-1e6/fimap-api/3.0.0" },
+      { rotulo: "Protótipo no Figma", url: "https://www.figma.com/design/n9xy7RJBfoPaCrBypary09/FIMAP?node-id=0-1&t=TCJwFEc0mMgeu5Zw-1" },
+      { rotulo: "Plano e documento de testes", url: "https://drive.google.com/drive/folders/13d5K0VUlFKNwP62hLj8w9BEgiCKD2Qti?usp=sharing" },
+    ],
   },
   {
     slug: "ecowayer",
+    videoPitch: "",
     nome: "EcoWayer",
     imagem: "./assets/images/2026-2/ecowayer.svg",
     equipe: "Meraki",
@@ -73,9 +55,9 @@ const projetos = [
     status: "Em desenvolvimento",
     inicio: "10/08/2026",
     areas: ["Front-end", "Back-end", "Mobile"],
-    tecnologias: [], // EDITAR: tecnologias utilizadas
+    tecnologias: [],
     destaque: "green",
-    problema: "", // EDITAR
+    problema: "",
     solucao:
       "Aplicativo em que os usuários encontram pontos de coleta seletiva e negociam itens recicláveis ou reutilizáveis por meio de doações, trocas ou vendas, com chat em tempo real moderado por inteligência artificial. Um sistema de recompensas converte ações ecológicas em pontos, que se transformam em cupons de desconto em parceiros.",
     funcionalidades: [
@@ -88,7 +70,7 @@ const projetos = [
       "ODS 12: Consumo e Produção Responsáveis (meta 12.5)",
       "ODS 11: Cidades e Comunidades Sustentáveis",
     ],
-    // Links profissionais: preencher somente com autorização de cada integrante
+
     integrantes: [
       {
         nome: "Jean Costa",
@@ -134,6 +116,7 @@ const projetos = [
   },
   {
     slug: "vibeeco",
+    videoPitch: "",
     nome: "VibeEco",
     imagem: "./assets/images/2026-2/vibeeco.svg",
     equipe: "TechProton",
@@ -144,21 +127,22 @@ const projetos = [
     status: "Em desenvolvimento",
     inicio: "10/08/2026",
     areas: ["Front-end", "Back-end", "Mobile", "Banco de dados"],
-    tecnologias: [], // EDITAR: tecnologias utilizadas
+    tecnologias: [],
     destaque: "blue",
-    problema: "", // EDITAR
+    problema: "",
     solucao:
       "Plataforma que transforma o aprendizado sobre sustentabilidade em uma experiência interativa, contínua e participativa. Pode ser utilizada em escolas, universidades, empresas, ONGs e comunidades, com área de usuários (web e mobile) e área administrativa.",
     funcionalidades: [
-      "Missões e desafios",
-      "Conteúdos educativos e quiz",
-      "Gamificação com XP, níveis, moedas, conquistas e ranking",
-      "Feed da comunidade com publicações e comentários",
-      "Recompensas",
-      "Painel administrativo",
+      "Login, primeiro acesso e recuperação de senha",
+      "Dashboard e feed com publicações, curtidas e comentários",
+      "Missões, desafios, conteúdos educativos e quiz",
+      "Gamificação com XP, níveis, moedas, conquistas, ranking e recompensas",
+      "Perfil, histórico de atividades, notificações e configurações",
+      "Painel administrativo para gerenciar usuários, missões, desafios, conteúdos e recompensas",
+      "Monitoramento de participação, atividades, indicadores e resultados",
     ],
     ods: [],
-    // Links profissionais: preencher somente com autorização de cada integrante
+
     integrantes: [
       {
         nome: "Pedro Sousa",
@@ -199,47 +183,92 @@ const projetos = [
   },
   {
     slug: "nexus",
-    nome: "NEXUS",
+    videoPitch: "",
+    nome: "AVALON",
     imagem: "./assets/images/2026-2/nexus.jpg",
-    equipe: "", 
-    categoria: "A definir", 
+    equipe: "Nexus",
+    categoria: "Gestão de Pessoas e Conformidade",
     turma: "Manhã",
-    descricaoCurta: "Informações do projeto em atualização.",
-    status: "A definir",
-    inicio: "",
-    areas: [],
-    tecnologias: [],
+    descricaoCurta:
+      "Plataforma web e mobile de gestão de pessoas, com autoatendimento para colaboradores e painéis para RH e gestores, priorizando privacidade e conformidade com a LGPD.",
+    status: "Em desenvolvimento",
+    inicio: "14/08/2026",
+    areas: ["Web", "Mobile", "Back-end", "Banco de dados"],
+    tecnologias: ["React", "HTML5", "CSS3", "JavaScript", "Node.js", "MySQL", "Kotlin"],
     destaque: "violet",
-    problema: "",
-    solucao: "",
-    funcionalidades: [],
+    problema:
+      "Dados de colaboradores e avaliações psicossociais exigem controles rigorosos de acesso e privacidade, que nem sempre são tratados como parte central de sistemas de gestão de pessoas.",
+    solucao:
+      "Plataforma integrada de RH com controle de acesso por perfil, anonimato em pesquisas por k-anonimato, trilha de auditoria e proteção de dados sensíveis desde a arquitetura.",
+    funcionalidades: [
+      "Gestão de colaboradores, jornada, escalas, férias e benefícios",
+      "Autoatendimento para colaboradores e painéis para RH e gestores",
+      "Pesquisas de experiência e avaliação de fatores psicossociais com anonimato",
+      "Gestão de documentos, feedback e planos de ação",
+      "Indicadores, painéis analíticos, regras e notificações",
+    ],
     ods: [],
-    integrantes: [],
-    links: [{ rotulo: "Repositório no GitHub", url: "https://github.com/Daniele-SS/NEXUS" }],
+    integrantes: [
+      { nome: "Daniele Silva Santos", funcao: "Gerente de Projetos, Mobile e Testes", contribuicao: "", link: "" },
+      { nome: "Geovane Santos", funcao: "Banco de Dados", contribuicao: "", link: "" },
+      { nome: "Matheus Aguiar", funcao: "Back-end", contribuicao: "", link: "" },
+      { nome: "Vitor Isidio", funcao: "Front-end", contribuicao: "", link: "" },
+    ],
+    links: [
+      { rotulo: "Repositório principal e documentação", url: "https://github.com/Daniele-SS/NEXUS" },
+      { rotulo: "Banco de dados", url: "https://github.com/Daniele-SS/AVALON-BANCO_DE_DADOS" },
+      { rotulo: "Back-end e API", url: "https://github.com/Daniele-SS/AVALON-BACK_END" },
+      { rotulo: "Front-end", url: "https://github.com/Daniele-SS/AVALON-FRONT_END" },
+      { rotulo: "Aplicativo mobile", url: "https://github.com/Daniele-SS/AVALON-MOBILE" },
+      { rotulo: "EAP/WBS no Miro", url: "https://miro.com/app/board/uXjVHgEmHAg=/" },
+    ],
   },
   {
     slug: "wattvision",
-    nome: "WattVision", // EDITAR: nome oficial do projeto
+    videoPitch: "",
+    nome: "WattVision",
     imagem: "./assets/images/2026-2/wattvision.svg",
-    equipe: "", // EDITAR
-    categoria: "A definir", // EDITAR
+    equipe: "Inova Core",
+    categoria: "Monitoramento Energético e IoT Industrial",
     turma: "Manhã",
-    descricaoCurta: "Informações do projeto em atualização.", // EDITAR
-    status: "A definir", // EDITAR
+    descricaoCurta:
+      "Software de monitoramento energético que transforma dados de consumo industrial em informações claras para acompanhar custos e apoiar decisões de gestores.",
+    status: "Em desenvolvimento",
     inicio: "",
-    areas: [],
-    tecnologias: [],
+    areas: ["Web", "Mobile", "IoT", "Monitoramento energético"],
+    tecnologias: ["React", "Tailwind", "Vite", "Node.js", "MQTT", "MySQL", "Kotlin", "ESP32", "PZEM", "PlatformIO"],
     destaque: "orange",
-    problema: "",
-    solucao: "",
-    funcionalidades: [],
+    problema:
+      "Dados de consumo podem ser difíceis de interpretar, leituras manuais atrasam decisões e gestores nem sempre conseguem identificar custos, desperdícios ou picos por equipamento.",
+    solucao:
+      "Painel de monitoramento contínuo que apresenta consumo, custos em reais e comparativos entre equipamentos em uma linguagem acessível para gestores.",
+    funcionalidades: [
+      "Cadastro de equipamentos e associação a medidores",
+      "Painel de consumo em tempo real e acompanhamento por período",
+      "Comparação de consumo entre equipamentos",
+      "Cálculo de custos em reais",
+      "Alertas para limites de consumo definidos",
+      "Exportação de relatórios em PDF e Excel",
+    ],
     ods: [],
-    integrantes: [],
-    links: [{ rotulo: "Repositório no GitHub", url: "https://github.com/DiegodelPadua/WattVision" }],
+    integrantes: [
+      { nome: "Lucas", funcao: "Gestão de Projetos e Mobile", contribuicao: "", link: "" },
+      { nome: "Juan", funcao: "Gestão de Projetos e Banco de Dados", contribuicao: "", link: "" },
+      { nome: "Thiago", funcao: "Front-end e UI/UX", contribuicao: "", link: "" },
+      { nome: "Diego", funcao: "Back-end e IoT", contribuicao: "", link: "" },
+    ],
+    links: [
+      { rotulo: "Repositório principal e documentação", url: "https://github.com/DiegodelPadua/WattVision" },
+      { rotulo: "Front-end", url: "https://github.com/alvesthzin-art/Font_WV" },
+      { rotulo: "Back-end", url: "https://github.com/DiegodelPadua/beck-end_wattVision" },
+      { rotulo: "EAP interativa", url: "https://visual-wbs-flow.lovable.app" },
+      { rotulo: "Entregáveis no Google Drive", url: "https://drive.google.com/drive/folders/1VxqPK-cBnGeIxJOPx4p3oeh0OyDS5ohL?usp=drive_link" },
+    ],
   },
     {
     slug: "dialoga",
-    nome: "DiaLoga",
+      videoPitch: "",
+      nome: "DiaLoga",
     imagem: "./assets/images/2026-2/dialoga.svg",
     equipe: "Tenebrix",
     categoria: "Saúde Mental",
@@ -247,49 +276,50 @@ const projetos = [
     descricaoCurta:
       "Plataforma que conecta pessoas, profissionais e tecnologia para facilitar o acompanhamento da saúde mental.",
     status: "Em desenvolvimento",
-    inicio: "", // EDITAR: o README não informa
+    inicio: "",
     areas: ["Front-end", "Back-end", "Mobile"],
-    tecnologias: [], // EDITAR: tecnologias utilizadas
+    tecnologias: [],
     destaque: "pink",
     problema: "",
     solucao:
       "Solução digital que utiliza a tecnologia para facilitar a comunicação e o acompanhamento entre pacientes e profissionais, com recursos de organização das informações e uma experiência acessível e intuitiva, disponível na web e em dispositivos móveis.",
-    funcionalidades: [], // EDITAR: o README não lista funcionalidades
+    funcionalidades: [],
     ods: [],
-    // Links profissionais: preencher somente com autorização de cada integrante
+
     integrantes: [
       {
         nome: "Julio Augusto",
-        funcao: "", // EDITAR
+        funcao: "",
         contribuicao: "",
         link: "https://github.com/julioau15",
       },
       {
         nome: "Mayara Martins",
-        funcao: "", // EDITAR
+        funcao: "",
         contribuicao: "",
         link: "https://github.com/maymandrade",
       },
       {
         nome: "Allan de Souza",
-        funcao: "", // EDITAR
+        funcao: "",
         contribuicao: "",
         link: "https://github.com/Dilansty",
       },
       {
         nome: "Brayan Alves",
-        funcao: "", // EDITAR
+        funcao: "",
         contribuicao: "",
         link: "https://github.com/Brayan717171",
       },
       {
         nome: "Enzo Crepaldi",
-        funcao: "", // EDITAR
+        funcao: "",
         contribuicao: "",
         link: "https://github.com/Enzu666",
       },
     ],
     links: [
+      { rotulo: "Repositório principal", url: "https://github.com/julioau15/dialoga" },
       { rotulo: "Back-end", url: "https://github.com/julioau15/backend-dialoga" },
       { rotulo: "Front-end", url: "https://github.com/julioau15/frontend-dialoga" },
       { rotulo: "Mobile", url: "https://github.com/julioau15/mobile-dialoga" },
@@ -297,10 +327,12 @@ const projetos = [
       { rotulo: "Protótipo no Figma", url: "https://www.figma.com/design/dos9pmRgG1Zdsi4Jv2Dxz3/Dialoga?node-id=0-1&t=QK3UcpP9JNshBnxi-1" },
       { rotulo: "Requisitos", url: "https://drive.google.com/drive/folders/1XuusPIwLsKWHOKNhdne1bNy9m-hTny93?usp=drive_link" },
       { rotulo: "Documentação de testes", url: "https://drive.google.com/drive/folders/1yvb_ywmisuCXlRef_wMocq479RUoOCf7?usp=drive_link" },
+      { rotulo: "Relatório de desempenho", url: "https://docs.google.com/spreadsheets/d/17nQWDR8c_Ky20b-XIM0shAfUIZVaTuDR4PwpJzllzG0/edit?gid=1904691641#gid=1904691641" },
     ],
   },
   {
     slug: "healthsystems",
+    videoPitch: "",
     nome: "HealthSystems",
     imagem: "./assets/images/2026-2/healthsystems.svg",
     equipe: "",
@@ -321,6 +353,7 @@ const projetos = [
   },
   {
     slug: "tcc-ds",
+    videoPitch: "",
     nome: "Materna",
     imagem: "./assets/images/2026-2/materna-logo.svg",
     imagemAjuste: "contain",
@@ -364,6 +397,7 @@ const projetos = [
   },
   {
     slug: "4tech-andpanelas",
+    videoPitch: "",
     nome: "Entre Panelas",
     imagem: "./assets/images/2026-2/entre-panelas-logo.png",
     imagemAjuste: "contain",
@@ -396,6 +430,7 @@ const projetos = [
   },
   {
     slug: "ecoleta-tcc",
+    videoPitch: "",
     nome: "Ecoleta",
     imagem: "./assets/images/2026-2/ecoleta-logo.png",
     imagemAjuste: "contain",
@@ -408,7 +443,8 @@ const projetos = [
     areas: ["Front-end", "Back-end", "Mobile", "Banco de dados"],
     tecnologias: ["HTML", "CSS", "JavaScript", "React", "Node.js", "MySQL", "Kotlin", "Android Studio", "API REST"],
     destaque: "green",
-    problema: "",
+    problema:
+      "Estabelecimentos geram materiais que podem ser reaproveitados, enquanto empresas coletoras procuram esses resíduos; sem um meio simples de conexão, a negociação e o acompanhamento da coleta ficam dispersos.",
     solucao: "Estabelecimentos cadastram resíduos disponíveis; empresas coletoras enviam ofertas, e as coletas aceitas são agendadas, registradas e acompanhadas até a conclusão.",
     funcionalidades: [
       "Cadastro de resíduos por tipo, quantidade, data e horário",
@@ -437,26 +473,63 @@ const projetos = [
   },
   {
     slug: "bloom-geral",
+    videoPitch: "",
     nome: "Bloom",
     imagem: "./assets/images/2026-2/bloom.svg",
-    equipe: "",
-    categoria: "A definir",
+    equipe: "Bloom",
+    categoria: "Bem-estar e Acolhimento Estudantil",
     turma: "Tarde",
-    descricaoCurta: "Informações do projeto em atualização.",
-    status: "A definir",
+    descricaoCurta:
+      "Plataforma de bem-estar, organização da rotina e acolhimento estudantil, com recursos pessoais e ferramentas institucionais que preservam a privacidade dos estudantes.",
+    status: "Em desenvolvimento",
     inicio: "",
-    areas: [],
-    tecnologias: [],
+    areas: ["Web", "Mobile", "Bem-estar estudantil"],
+    tecnologias: ["React", "Kotlin", "Node.js", "MySQL"],
     destaque: "pink",
-    problema: "",
-    solucao: "",
-    funcionalidades: [],
+    problema:
+      "Recursos de bem-estar, organização e apoio estudantil costumam estar dispersos em ferramentas diferentes, enquanto instituições precisam de informações agregadas sem expor dados pessoais dos estudantes.",
+    solucao:
+      "Ambiente com ferramentas de organização e bem-estar para estudantes e recursos institucionais de acolhimento e indicadores agregados. O vínculo institucional é opcional, e informações pessoais não são expostas individualmente.",
+    funcionalidades: [
+      "Autenticação e painel inicial para estudantes e instituições",
+      "Check-in emocional, anotações e diário pessoal",
+      "Pomodoro, tarefas, calendário e exercícios de respiração e relaxamento",
+      "Vínculo institucional opcional, avaliação de aulas e acolhimento",
+      "Painel institucional com indicadores agregados de bem-estar",
+      "Eventos, comunicação e contexto acadêmico",
+      "Perfil, notificações e configurações",
+    ],
     ods: [],
-    integrantes: [{ nome: "Lucas Alexandre", funcao: "Líder/Responsável", contribuicao: "", link: "https://github.com/LucasAlexandreDev" }],
-    links: [{ rotulo: "Repositório no GitHub", url: "https://github.com/LucasAlexandreDev/bloom-geral" }],
+    integrantes: [
+      { nome: "Lucas Alexandre", funcao: "Gestão do Projeto e Back-end", contribuicao: "", link: "https://github.com/LucasAlexandreDev" },
+      { nome: "Gisele", funcao: "Banco de Dados e Front-end Institucional", contribuicao: "", link: "https://github.com/Gisele06" },
+      { nome: "Gabriel", funcao: "Front-end Estudante e Mobile", contribuicao: "", link: "https://github.com/GabrielWuWR" },
+      { nome: "Israel", funcao: "Front-end Institucional e Mobile", contribuicao: "", link: "https://github.com/japahashi" },
+      { nome: "Alice", funcao: "Front-end Estudante e Mobile", contribuicao: "", link: "https://github.com/trixiealice" },
+    ],
+    links: [
+      { rotulo: "Repositório principal e documentação", url: "https://github.com/LucasAlexandreDev/bloom-geral" },
+      { rotulo: "Banco de dados", url: "https://github.com/LucasAlexandreDev/bloom-database" },
+      { rotulo: "Back-end compartilhado", url: "https://github.com/LucasAlexandreDev/bloom-backend" },
+      { rotulo: "API Gateway", url: "https://github.com/LucasAlexandreDev/bloom-api-gateway" },
+      { rotulo: "API de autenticação", url: "https://github.com/LucasAlexandreDev/bloom-api-auth" },
+      { rotulo: "API do estudante", url: "https://github.com/LucasAlexandreDev/bloom-api-student" },
+      { rotulo: "API da instituição", url: "https://github.com/LucasAlexandreDev/bloom-api-institution" },
+      { rotulo: "API do chatbot", url: "https://github.com/LucasAlexandreDev/bloom-api-chatbot" },
+      { rotulo: "Front-end do estudante", url: "https://github.com/LucasAlexandreDev/bloom-frontend-estudante" },
+      { rotulo: "Front-end da instituição", url: "https://github.com/LucasAlexandreDev/bloom-frontend-instituicao" },
+      { rotulo: "Aplicativo mobile", url: "https://github.com/LucasAlexandreDev/bloom-mobile" },
+      { rotulo: "EAP/WBS no Miro", url: "https://miro.com/welcomeonboard/azhPY3V1Q2tXd0kxNExqbzJqS0gzd1BYODZWY2RNZXV4cy9EZldBUVpsRmVyK0hWY2ViZjJHMjI0a01Fc003cHp5emlNYWZzVDFKaWIyZStBZGRtY0ViL2FtcUlUSXZENEp4Wmp2TnRUbXJSQks0T1FBUGd6ZGZWMGEvM2I2ZFZ3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=217741407892" },
+      { rotulo: "Protótipos web e mobile no Figma", url: "https://www.figma.com/design/TW3Q7xZefEDFw7CBK2OshW/TCC?node-id=0-1&t=mHqe21X5G6LwTwHQ-1" },
+      { rotulo: "Requisitos no Google Drive", url: "https://drive.google.com/drive/folders/1IgGRtH8Y6VZXTuRTXdRBRwPtk7pY_Nam?usp=sharing" },
+      { rotulo: "TAP geral", url: "https://github.com/LucasAlexandreDev/bloom-geral/wiki/Termo-de-Abertura-de-Projeto-(TAP)-%E2%80%90-Bloom-Geral" },
+      { rotulo: "TAP do módulo estudante", url: "https://github.com/LucasAlexandreDev/bloom-geral/wiki/Termo-de-Abertura-de-Projeto-(TAP)-%E2%80%90-Bloom-Estudante" },
+      { rotulo: "TAP do módulo instituição", url: "https://github.com/LucasAlexandreDev/bloom-geral/wiki/Termo-de-Abertura-de-Projeto-(TAP)-%E2%80%90-Bloom-Institucional" },
+    ],
   },
   {
     slug: "oroscorp",
+    videoPitch: "",
     nome: "OROSCORP",
     imagem: "./assets/images/2026-2/oroscorp-fundo.png",
     equipe: "Equipe OROSCORP",
@@ -503,12 +576,4 @@ const projetos = [
   },
 ];
 
-/*
-  ACERVO (edições anteriores)
-  A estrutura da página está pronta. Enquanto a lista estiver vazia,
-  a vitrine exibe a mensagem "Acervo em catalogação".
-
-  Para catalogar uma edição, adicione um item neste formato:
-  { edicao: "2025 · 2º semestre", quantidade: 12, temas: ["Educação", "Saúde"] },
-*/
 const acervo = [];
