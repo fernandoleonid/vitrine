@@ -1,0 +1,4 @@
+# Cache local e relatorio gerados pelo script de verificação de atualizações
+# dos repositórios (scripts/check_repo_updates.py). Reescritos a cada execução.
+scripts/.repo-status-cache.json
+repositorio_atualizados.txt
