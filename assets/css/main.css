@@ -737,8 +737,9 @@
   background: var(--color-mist);
   color: #565652;
   border-radius: 5px;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
+  min-width: 30%;
 }
 
 .tags a {
