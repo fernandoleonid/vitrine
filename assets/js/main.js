@@ -147,7 +147,7 @@ function visualProjeto(projeto, grande = false) {
 
     return `
       <div class="project-visual ${grande ? "project-visual--large" : ""}">
-        <img class="visual-imagem ${projeto.imagemAjuste === "contain" ? "visual-imagem--contain" : ""}" src="${imagem}"
+        <img class="visual-imagem" src="${imagem}"
              alt="Imagem do projeto ${projeto.nome}" loading="lazy" />
       </div>`;
   }
