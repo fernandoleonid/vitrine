@@ -5,7 +5,7 @@ const edicaoAtual = { ano: 2026, semestre: "2º semestre", numero: "02" };
 const projetos = [
   {
     slug: "fimap",
-    videoPitch: "",
+    videoPitch: "https://youtu.be/YeN4mqBlzFU?is=_0U_wnZlS1qhq6Hw",
     nome: "FIMAP",
     imagem: "./assets/images/2026-2/fimap.svg",
     equipe: "",
@@ -15,18 +15,30 @@ const projetos = [
     status: "A definir",
     inicio: "",
     areas: [],
-    tecnologias: [],
+    tecnologias: [
+      "Tailwind", "Vue.js", "TypeScript", "Kotlin", "Jetpack Compose",
+      "Node.js", "JavaScript", "Cloudflare Workers", "gemma-4-26b-a4b-it",
+      "MySQL", "Azure App Service", "Render", "GitHub",
+    ],
     destaque: "cyan",
-    problema: "",
-    solucao: "",
-    funcionalidades: [],
+    problema:
+      "O controle financeiro passivo nem sempre ajuda as pessoas a cobrir os custos mensais ou encontrar alternativas mais econômicas para suas despesas.",
+    solucao:
+      "Plataforma de gestão financeira pessoal que centraliza dados por meio de Open Finance e usa inteligência artificial para identificar oportunidades de economia, orientar metas e simular cenários financeiros.",
+    funcionalidades: [
+      "Dashboard personalizável com centralização de dados financeiros via Open Finance",
+      "Assistente financeiro conversacional com inteligência artificial",
+      "Detecção de oportunidades de economia e alertas com sugestões de redução de custos",
+      "Metas financeiras guiadas com cálculo de parcelas e indicação de despesas a reduzir",
+      "Simulação de custos e investimentos com ajuste manual de valores",
+    ],
     ods: [],
     integrantes: [
-      { nome: "Arthur", funcao: "Integrante", contribuicao: "", link: "https://github.com/Thuzs" },
-      { nome: "Murilo", funcao: "Integrante", contribuicao: "", link: "https://github.com/Murilo-Antunes" },
-      { nome: "Hugo", funcao: "Integrante", contribuicao: "", link: "https://github.com/Guhhxz" },
-      { nome: "Pedro", funcao: "Integrante", contribuicao: "", link: "https://github.com/pedrorodriguesdev" },
-      { nome: "Anderson", funcao: "Integrante", contribuicao: "", link: "https://github.com/Nephyro" },
+      { nome: "Arthur", funcao: "Desenvolvedor", contribuicao: "", link: "https://github.com/Thuzs" },
+      { nome: "Murilo", funcao: "Desenvolvedor", contribuicao: "", link: "https://github.com/Murilo-Antunes" },
+      { nome: "Hugo", funcao: "Desenvolvedor", contribuicao: "", link: "https://github.com/Guhhxz" },
+      { nome: "Pedro", funcao: "Desenvolvedor", contribuicao: "", link: "https://github.com/pedrorodriguesdev" },
+      { nome: "Anderson", funcao: "Desenvolvedor", contribuicao: "", link: "https://github.com/Nephyro" },
     ],
     links: [
       { rotulo: "Repositório principal", url: "https://github.com/Thuzs/Fimap" },
@@ -183,7 +195,7 @@ const projetos = [
   },
   {
     slug: "nexus",
-    videoPitch: "",
+    videoPitch: "https://www.youtube.com/watch?v=gKs0aSFFhpw",
     nome: "AVALON",
     imagem: "./assets/images/2026-2/nexus.jpg",
     equipe: "Nexus",
@@ -194,7 +206,7 @@ const projetos = [
     status: "Em desenvolvimento",
     inicio: "14/08/2026",
     areas: ["Web", "Mobile", "Back-end", "Banco de dados"],
-    tecnologias: ["React", "HTML5", "CSS3", "JavaScript", "Node.js", "MySQL", "Kotlin"],
+    tecnologias: ["React", "HTML5", "CSS3", "JavaScript", "Node.js", "MySQL", "Kotlin", "Git", "GitHub"],
     destaque: "violet",
     problema:
       "Dados de colaboradores e avaliações psicossociais exigem controles rigorosos de acesso e privacidade, que nem sempre são tratados como parte central de sistemas de gestão de pessoas.",
@@ -209,10 +221,10 @@ const projetos = [
     ],
     ods: [],
     integrantes: [
-      { nome: "Daniele Silva Santos", funcao: "Gerente de Projetos, Mobile e Testes", contribuicao: "", link: "" },
-      { nome: "Geovane Santos", funcao: "Banco de Dados", contribuicao: "", link: "" },
-      { nome: "Matheus Aguiar", funcao: "Back-end", contribuicao: "", link: "" },
-      { nome: "Vitor Isidio", funcao: "Front-end", contribuicao: "", link: "" },
+      { nome: "Daniele Silva Santos", funcao: "Gerente de Projetos (Product Owner), Desenvolvedora Mobile e Testes", contribuicao: "", link: "" },
+      { nome: "Geovane Santos", funcao: "DBA", contribuicao: "", link: "" },
+      { nome: "Matheus Aguiar", funcao: "Desenvolvedor Back-end", contribuicao: "", link: "" },
+      { nome: "Vitor Isidio", funcao: "Desenvolvedor Front-end", contribuicao: "", link: "" },
     ],
     links: [
       { rotulo: "Repositório principal e documentação", url: "https://github.com/Daniele-SS/NEXUS" },
@@ -220,6 +232,11 @@ const projetos = [
       { rotulo: "Back-end e API", url: "https://github.com/Daniele-SS/AVALON-BACK_END" },
       { rotulo: "Front-end", url: "https://github.com/Daniele-SS/AVALON-FRONT_END" },
       { rotulo: "Aplicativo mobile", url: "https://github.com/Daniele-SS/AVALON-MOBILE" },
+      { rotulo: "Requisitos funcionais", url: "https://github.com/Daniele-SS/NEXUS/blob/main/docs/RF-Documentacao-de-Requisitos.pdf" },
+      { rotulo: "Requisitos não funcionais", url: "https://github.com/Daniele-SS/NEXUS/blob/main/docs/RNF-Documentacao-de-Requisitos.pdf" },
+      { rotulo: "Regras de negócio", url: "https://github.com/Daniele-SS/NEXUS/blob/main/docs/RN-Regras-de-Negocio.pdf" },
+      { rotulo: "Plano de teste de software", url: "https://github.com/Daniele-SS/NEXUS/blob/main/docs/Plano-de-Teste-de-Software.pdf" },
+      { rotulo: "Planejamento de sprints", url: "https://github.com/Daniele-SS/NEXUS/blob/main/docs/Sprints-Planejamento.pdf" },
       { rotulo: "EAP/WBS no Miro", url: "https://miro.com/app/board/uXjVHgEmHAg=/" },
     ],
   },
@@ -267,7 +284,7 @@ const projetos = [
   },
     {
     slug: "dialoga",
-      videoPitch: "",
+      videoPitch: "https://youtu.be/xwVtOvbCAeA",
       nome: "DiaLoga",
     imagem: "./assets/images/2026-2/dialoga.svg",
     equipe: "Tenebrix",
@@ -328,6 +345,10 @@ const projetos = [
       { rotulo: "Requisitos", url: "https://drive.google.com/drive/folders/1XuusPIwLsKWHOKNhdne1bNy9m-hTny93?usp=drive_link" },
       { rotulo: "Documentação de testes", url: "https://drive.google.com/drive/folders/1yvb_ywmisuCXlRef_wMocq479RUoOCf7?usp=drive_link" },
       { rotulo: "Relatório de desempenho", url: "https://docs.google.com/spreadsheets/d/17nQWDR8c_Ky20b-XIM0shAfUIZVaTuDR4PwpJzllzG0/edit?gid=1904691641#gid=1904691641" },
+      { rotulo: "Modelo conceitual do banco de dados", url: "https://github.com/julioau15/dialoga/tree/main/docs/database/modelo-conceitual" },
+      { rotulo: "Modelo lógico do banco de dados", url: "https://github.com/julioau15/dialoga/tree/main/docs/database/modelo-logico" },
+      { rotulo: "Scripts do banco de dados", url: "https://github.com/julioau15/dialoga/tree/main/docs/database/scripts" },
+      { rotulo: "Documentação Swagger", url: "https://github.com/julioau15/dialoga/tree/main/docs/swagger" },
     ],
   },
   {

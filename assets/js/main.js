@@ -189,7 +189,7 @@ function urlVideoPitch(valor) {
   }
 
   return /^[\w-]{11}$/.test(id)
-    ? `https://www.youtube-nocookie.com/embed/${id}`
+    ? `https://www.youtube.com/embed/${id}`
     : "";
 }
 
