@@ -56,7 +56,7 @@ const projetos = [
   },
   {
     slug: "ecowayer",
-    videoPitch: "",
+    videoPitch: "https://www.youtube.com/watch?v=dRs0VsSeSCE",
     nome: "EcoWayer",
     imagem: "./assets/images/2026-2/ecowayer.svg",
     equipe: "Meraki",
@@ -195,10 +195,10 @@ const projetos = [
     ],
   },
   {
-    slug: "nexus",
-    videoPitch: "https://www.youtube.com/watch?v=gKs0aSFFhpw",
+    slug: "AVALON",
+    videoPitch: "https://www.youtube.com/watch?v=hFPv9Uy47MU",
     nome: "AVALON",
-    imagem: "./assets/images/2026-2/nexus.jpg",
+    imagem: "./assets/images/2026-2/avalon.png",
     equipe: "Nexus",
     categoria: "Gestão de Pessoas e Conformidade",
     turma: "Manhã",
@@ -243,7 +243,7 @@ const projetos = [
   },
   {
     slug: "wattvision",
-    videoPitch: "",
+    videoPitch: "https://www.youtube.com/watch?v=vWaRM7rLxqM",
     nome: "WattVision",
     imagem: "./assets/images/2026-2/wattvision.svg",
     equipe: "Inova Core",
