@@ -443,7 +443,7 @@ const projetos = [
   },
   {
     slug: "4tech-andpanelas",
-    videoPitch: "https://www.youtube.com/watch?v=wrfW4_GVeho",
+    videoPitch: "https://www.youtube.com/watch?v=pwFBSQtzajk",
     nome: "Entre Panelas",
     imagem: "./assets/images/2026-2/entre-panelas-logo.png",
     imagemAjuste: "contain",
@@ -528,7 +528,7 @@ const projetos = [
   },
   {
     slug: "bloom-geral",
-    videoPitch: "",
+    videoPitch: "https://youtu.be/ySyEP2Fp6uc?si=L5gfPZQTJxtmie4x",
     nome: "Bloom",
     imagem: "./assets/images/2026-2/bloom.png",
     equipe: "Bloom",
