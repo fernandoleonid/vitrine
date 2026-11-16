@@ -367,7 +367,7 @@ const projetos = [
     slug: "healthsystems",
     videoPitch: "https://youtube.com/shorts/1vux07mwpwk",
     nome: "MedTime",
-    imagem: "./assets/images/2026-2/healthsystems.svg",
+    imagem: "./assets/images/2026-2/bannerMedTime.png",
     equipe: "HealthSystems",
     categoria: "Gestão de medicamentos",
     turma: "Tarde",
@@ -485,7 +485,7 @@ const projetos = [
   },
   {
     slug: "ecoleta-tcc",
-    videoPitch: "https://youtu.be/UHq8JzMbOGs",
+    videoPitch: "https://www.youtube.com/watch?v=fqI_ac7iLuw",
     nome: "Ecoleta",
     imagem: "./assets/images/2026-2/ecoleta-logo.png",
     imagemAjuste: "contain",
@@ -584,7 +584,7 @@ const projetos = [
   },
   {
     slug: "oroscorp",
-    videoPitch: "https://www.youtube.com/shorts/dOzd8_zzeV8",
+    videoPitch: "https://www.youtube.com/shorts/FEbL5o1jPJQ",
     nome: "OROSCORP",
     imagem: "./assets/images/2026-2/oroscorp-fundo.png",
     equipe: "Equipe OROSCORP",
